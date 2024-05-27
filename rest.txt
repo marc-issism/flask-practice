@@ -1,0 +1,58 @@
+WHAT IS REST?
+    Representational State Transfer which is a software architecture for APIs
+    REST APIs: APIs that follow the REST architectural style
+    RESTful web/API: Web services that implement REST architecture
+    1. Uniform interface: the transfer of information in a standard format
+        i. Requests identify resources using a uniform resource identifier
+        ii. Clients have enough info on resource to modify or delete using metadata to describe the resource
+        iii. Clients receive information on how to process the information
+        iv. Clients recieve information on all other related resources in order to complete a task
+    2. Statelessness: the server completes every client request independently of all previous Requests
+        the server should be able to isolate Requests
+    3. Layered System: serves passing on requests to other servers, layers invisible to Clients
+    4. Cacheability: storing some responses on client or intermediary to improve response time
+    5. Code on demand: servers temporarily extend or customize client functionality by transferring software programming Code
+        to client
+
+BENEFITS
+    i. scalability
+    ii. flexibility
+    iii. independence
+
+HOW DO THEY WORK?
+    1. Client sends request to server following API documentation
+    2. Server authenticates request from client
+    3. Server processes request internally after having received interface
+    4. Server retuns response to client
+
+API Client requests
+    1. METHOD: via Hypertext transfer Protocol (HTTP)
+        i. get: access to resource at specified URL
+        ii. post: send data to server, adds a duplicate if repeated
+        iii. put: updata existing data in server, yields the same result if repeated
+        iv. delete: remove a resource
+    2. DATA: to be worked with
+    3. PARAMETERS:
+        ex. path parameters, query parameters, cookie parameters
+
+API Authentication Methods
+    1. HTTP auth: 
+        i. Basic: client sends username and password in request header, encoded in base64
+        ii. Bearer: giving access control to token "bearer" which is like a login request
+    2. API keys:
+        Server generates a unique value for a first-time client (less secure)
+    3. OAuth:
+        Combination of passwords and tokens. Server requests a password then asks for a token to
+        complete the process.
+
+SERVER RESPONSE
+    REST principles require the server response to contain the following main components:
+        i. Status line:
+            200: generic success response
+            201: POST method success
+            400: Incorrect request, server cannot process
+            404: Resource not found
+        ii. Message body:
+            information in XML or JSON format
+        iii. Header: 
+            metadata that gives context about the response
